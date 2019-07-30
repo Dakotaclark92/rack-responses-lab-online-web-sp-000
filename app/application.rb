@@ -3,7 +3,7 @@ class Application
   def call(env)
     resp = Rack::Response.new
     
-    resp.write time.hour
+    if Time.now.hour.between(0)
     
     resp.finish
     
