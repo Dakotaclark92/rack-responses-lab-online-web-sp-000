@@ -5,7 +5,8 @@ class Application
     
     resp.write time.hour
     
-    resp
+    resp.finish
+    
     
     
   end
