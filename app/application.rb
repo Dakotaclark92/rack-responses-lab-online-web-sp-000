@@ -3,7 +3,10 @@ class Application
   def call(env)
     resp = Rack::Response.new
     
-    if Time.now.hour.between(0)
+    if Time.now.hour.between(0, 11)
+      resp.write "Good Morning!"
+    else 
+      resp.write "Good Afternoon!"
     
     resp.finish
     
